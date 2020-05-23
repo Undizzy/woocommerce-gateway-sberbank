@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Sberbank Gateway\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-23 16:35+0000\n"
+"PO-Revision-Date: 2020-05-23 17:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: Русский\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.4; wp-5.4.1"
+
+#: woocommerce-gateway-sberbank.php:144
+msgid ""
+"Accept payments by credit cards through acquiring of Sberbank of Russia."
+msgstr ""
+"Принимайте платежи банковскими картами через эквайринг Сбербанка России."
+
+#: woocommerce-gateway-sberbank.php:107
+msgid "Awaiting payment"
+msgstr "Ожидает оплаты"
+
+#: woocommerce-gateway-sberbank.php:76
+msgid "Configure"
+msgstr "Настроить"
+
+#: woocommerce-gateway-sberbank.php:186
+msgid "Credit card payment"
+msgstr "Оплата банковской картой "
+
+#: woocommerce-gateway-sberbank.php:193
+msgid "Credit card payment."
+msgstr "Оплата банковской картой."
+
+#: woocommerce-gateway-sberbank.php:91
+msgid "Email costumer invoice with Pay link"
+msgstr "Отправить Счёт клиенту с ссылкой на оплату"
+
+#. Author URI of the plugin
+msgid "http://twitter.com/NVitkovsky"
+msgstr ""
+
+#: woocommerce-gateway-sberbank.php:46 woocommerce-gateway-sberbank.php:59
+msgctxt "Order status"
+msgid "Pending credit card payment"
+msgstr "Ожидается оплата банковской картой"
+
+#: woocommerce-gateway-sberbank.php:113
+msgid "Pay Link manually sent to customer."
+msgstr "Платёжная ссылка вручную отправлена клиенту."
+
+#. %s: number of orders
+#: woocommerce-gateway-sberbank.php:52
+#, php-format
+msgid "Pending credit card payment <span class=\"count\">(%s)</span>"
+msgid_plural "Pending credit card payment <span class=\"count\">(%s)</span>"
+msgstr[0] "Оплата банковской картой"
+msgstr[1] "Оплата банковской картой"
+msgstr[2] "Оплата банковской картой"
+
+#: woocommerce-gateway-sberbank.php:200
+msgid "Please wait for the operator to confirm the order."
+msgstr "Пожалуйста, дождитесь звонка оператора для подтверждения заказа."
+
+#: woocommerce-gateway-sberbank.php:143
+msgctxt "Sberbank Acquiring payment method"
+msgid "Sberbank Acquiring payments"
+msgstr "Оплата через эквайринг Сбербанка России"
+
+#: woocommerce-gateway-sberbank.php:204
+msgid "Sberbank acquiring Payment URL "
+msgstr "URL страницы оплаты эквайринга Сбербанка"
+
+#: woocommerce-gateway-sberbank.php:206
+msgid "Sberbank acquiring Payment URL."
+msgstr "URL страницы оплаты эквайринга Сбербанка"
+
+#: woocommerce-gateway-sberbank.php:179
+msgid "Sberbank Acquiring payments"
+msgstr "Платежи через Сбербанк эквайринг"
+
+#: woocommerce-gateway-sberbank.php:211
+msgid "Sberbank acquiring Token"
+msgstr "ApiToken эквайринга Сбербанка"
+
+#: woocommerce-gateway-sberbank.php:213
+msgid "Sberbank acquiring Token."
+msgstr "ApiToken эквайринга Сбербанка."
+
+#. Author of the plugin
+msgid "Undizzy"
+msgstr "Undizzy"
+
+#. Description of the plugin
+msgid "WooCommerce Payment gateway for Sberbank"
+msgstr ""
+"Платёжный шлюз WooCommerce для приёма платежей банковскими картами через "
+"эквайринг Сбербанка"
+
+#. Name of the plugin
+msgid "WooCommerce Sberbank Gateway"
+msgstr "WooCommerce Sberbank Gateway"

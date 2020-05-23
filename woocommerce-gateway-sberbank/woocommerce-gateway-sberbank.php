@@ -4,7 +4,7 @@
  * Description: WooCommerce Payment gateway for Sberbank
  * Author: Undizzy
  * Author URI: http://twitter.com/NVitkovsky
- * Version: 1.0.2
+ * Version: 1.1.2
  * Text Domain: wc-gateway-sbrf
  * Domain Path: /languages/
  *
@@ -116,6 +116,15 @@ add_action('woocommerce_order_action_send_sbrf_pay_link', 'send_costumer_sbrf_pa
 
 
 /**
+ * Including language directory
+ */
+function plugin_lang() {
+	load_plugin_textdomain( 'wc-gateway-sbrf', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'plugin_lang' );
+
+
+/**
  * Offline Payment Gateway
  *
  * Provides an Sberbank Payment Gateway.
@@ -161,7 +170,6 @@ function wc_sbrf_gateway_init() {
 			) );
 			add_action( 'woocommerce_thankyou_' . $this->id, array( $this, 'thankyou_page' ) );
 			add_filter('woocommerce_get_checkout_payment_url', array($this, 'sbrf_checkout_payment_url') );
-			add_action( 'plugins_loaded', array($this, 'plugin_lang') );
 
 			// Customer Emails.
 			add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 3 );
@@ -286,13 +294,6 @@ function wc_sbrf_gateway_init() {
 				'result'   => 'success',
 				'redirect' => $this->get_return_url( $order ),
 			);
-		}
-
-		/**
-		 * Including language directory
-		 */
-		public function plugin_lang() {
-			load_plugin_textdomain( 'sbrf', false, dirname( plugin_basename(__FILE__) ) . '/languages' );
 		}
 	}
 }
