@@ -4,7 +4,7 @@
  * Description: WooCommerce Payment gateway for Sberbank
  * Author: Undizzy
  * Author URI: http://twitter.com/NVitkovsky
- * Version: 1.1.2
+ * Version: 1.1.3
  * Text Domain: wc-gateway-sbrf
  * Domain Path: /languages/
  *
