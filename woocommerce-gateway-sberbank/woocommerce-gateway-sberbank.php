@@ -138,6 +138,7 @@ add_action( 'plugins_loaded', 'plugin_lang' );
  */
 add_action( 'plugins_loaded', 'wc_sbrf_gateway_init', 11 );
 
+
 function wc_sbrf_gateway_init() {
 
 	class WC_Gateway_SBRF extends WC_Payment_Gateway {
@@ -169,7 +170,7 @@ function wc_sbrf_gateway_init() {
 				'process_admin_options'
 			) );
 			add_action( 'woocommerce_thankyou_' . $this->id, array( $this, 'thankyou_page' ) );
-			add_filter('woocommerce_get_checkout_payment_url', array($this, 'sbrf_checkout_payment_url') );
+			add_filter('woocommerce_get_checkout_payment_url', array($this, 'sbrf_checkout_payment_url'), 10, 2 );
 
 			// Customer Emails.
 			add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 3 );
@@ -238,13 +239,10 @@ function wc_sbrf_gateway_init() {
 		 * Adds Checkout Payment URL to Sberbank Acquiring Page
 		 *
 		 * @param $url string current checkout payment url
+		 * @param $order object WC_Order
 		 * @return string Sberbank Acquiring Page URL + data
 		 */
-		public function sbrf_checkout_payment_url($url){
-			$start = strpos($url, 'y/');
-			$len = stripos($url, '?')-($start+2);
-			$order_id = substr($url, $start+2, $len);
-			$order = wc_get_order( $order_id );
+		public function sbrf_checkout_payment_url( $url, $order ){
 			$total = $order->get_total();
 			$order_number = $order->get_order_number();
 			$order_billing_email = $order->get_billing_email();
